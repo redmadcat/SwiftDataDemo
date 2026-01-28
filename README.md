@@ -2,9 +2,8 @@
 
 ## Ссылки
 
-Проект подготовлен на основе примеров из книги Mastering SwiftUI (SIMON NG APPCODA)
-
-[Книга](https://www.appcoda.com/swiftui6-ios18-book/)
+Проект подготовлен на основе примеров из книги
+[Mastering SwiftUI for iOS 18 and Xcode 16 AppCoda 2024](https://www.appcoda.com/swiftui6-ios18-book/)
 
 ## Введение
 
