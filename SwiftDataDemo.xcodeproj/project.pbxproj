@@ -13,6 +13,8 @@
 		9485C9FA2F2A31A0008A4744 /* SwiftDataDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485C9F52F2A31A0008A4744 /* SwiftDataDemoApp.swift */; };
 		9485CA002F2A3D92008A4744 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485C9FF2F2A3D8B008A4744 /* TaskItem.swift */; };
 		9485CA022F2A3DFC008A4744 /* TaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485CA012F2A3DF5008A4744 /* TaskPriority.swift */; };
+		9485CA042F2A407B008A4744 /* TaskCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485CA032F2A407B008A4744 /* TaskCreationView.swift */; };
+		9485CA072F2A42BC008A4744 /* PriorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485CA062F2A42BC008A4744 /* PriorityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		9485C9F52F2A31A0008A4744 /* SwiftDataDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataDemoApp.swift; sourceTree = "<group>"; };
 		9485C9FF2F2A3D8B008A4744 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		9485CA012F2A3DF5008A4744 /* TaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriority.swift; sourceTree = "<group>"; };
+		9485CA032F2A407B008A4744 /* TaskCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreationView.swift; sourceTree = "<group>"; };
+		9485CA062F2A42BC008A4744 /* PriorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				9485C9FB2F2A31FF008A4744 /* App */,
 				9485C9FE2F2A3788008A4744 /* Models */,
 				9485C9FC2F2A320B008A4744 /* Resources */,
+				9485CA052F2A41EC008A4744 /* Components */,
 				9485C9FD2F2A325E008A4744 /* Screens */,
 				9485C9F22F2A31A0008A4744 /* Preview Content */,
 				9485C9F42F2A31A0008A4744 /* ContentView.swift */,
@@ -92,6 +97,7 @@
 		9485C9FD2F2A325E008A4744 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9485CA032F2A407B008A4744 /* TaskCreationView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -103,6 +109,14 @@
 				9485C9FF2F2A3D8B008A4744 /* TaskItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9485CA052F2A41EC008A4744 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9485CA062F2A42BC008A4744 /* PriorityView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +192,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9485CA042F2A407B008A4744 /* TaskCreationView.swift in Sources */,
 				9485C9F92F2A31A0008A4744 /* ContentView.swift in Sources */,
+				9485CA072F2A42BC008A4744 /* PriorityView.swift in Sources */,
 				9485CA002F2A3D92008A4744 /* TaskItem.swift in Sources */,
 				9485CA022F2A3DFC008A4744 /* TaskPriority.swift in Sources */,
 				9485C9FA2F2A31A0008A4744 /* SwiftDataDemoApp.swift in Sources */,
