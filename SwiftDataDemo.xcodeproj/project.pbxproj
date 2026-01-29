@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940ADD642F2B7E5A00DAFC5F /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940ADD632F2B7E4100DAFC5F /* CheckboxStyle.swift */; };
 		9485C9F72F2A31A0008A4744 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9485C9F12F2A31A0008A4744 /* Preview Assets.xcassets */; };
 		9485C9F82F2A31A0008A4744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9485C9F32F2A31A0008A4744 /* Assets.xcassets */; };
 		9485C9F92F2A31A0008A4744 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485C9F42F2A31A0008A4744 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		940ADD632F2B7E4100DAFC5F /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		9485C9E02F2A3152008A4744 /* SwiftDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9485C9F12F2A31A0008A4744 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9485C9F32F2A31A0008A4744 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940ADD622F2B7E3000DAFC5F /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				940ADD632F2B7E4100DAFC5F /* CheckboxStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		9485C9D72F2A3152008A4744 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				9485C9FB2F2A31FF008A4744 /* App */,
+				940ADD622F2B7E3000DAFC5F /* Styles */,
 				9485C9FE2F2A3788008A4744 /* Models */,
 				9485C9FC2F2A320B008A4744 /* Resources */,
 				9485CA052F2A41EC008A4744 /* Components */,
@@ -192,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940ADD642F2B7E5A00DAFC5F /* CheckboxStyle.swift in Sources */,
 				9485CA042F2A407B008A4744 /* TaskCreationView.swift in Sources */,
 				9485C9F92F2A31A0008A4744 /* ContentView.swift in Sources */,
 				9485CA072F2A42BC008A4744 /* PriorityView.swift in Sources */,
