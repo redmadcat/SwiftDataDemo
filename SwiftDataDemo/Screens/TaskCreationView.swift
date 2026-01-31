@@ -11,14 +11,12 @@ struct TaskCreationView: View {
     @Environment(\.modelContext) private var modelContext
     
     @Binding var isShow: Bool
-    @State var name: String
-    @State var priority: TaskPriority
-    @State var isEditing = false
+    @State private var name: String = ""
+    @State private var priority: TaskPriority = .normal
+    @State private var isValid = false
     
     var body: some View {
         VStack {
-            Spacer()
-            
             VStack(alignment: .leading) {
                 HStack {
                     Text("Add a new task")
@@ -36,9 +34,10 @@ struct TaskCreationView: View {
                     }
                 }
                 
-                TextField("Enter the task description", text: $name, onEditingChanged: { editingChanged in
-                    isEditing = editingChanged
-                })
+                TextField("Enter the task description", text: $name)
+                    .onChange(of: name) {
+                        isValid = !name.isEmpty
+                    }
                 .padding()
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
@@ -68,12 +67,8 @@ struct TaskCreationView: View {
                         }
                 }
                 .padding(.bottom, 30)
-                
+                                
                 Button(action: {
-                    if name.trimmingCharacters(in: .whitespaces) == "" {
-                        return
-                    }
-                    
                     isShow = false
                     addTask(name: name, priority: priority)
                 }) {
@@ -85,12 +80,15 @@ struct TaskCreationView: View {
                         .background(.purple)
                         .cornerRadius(10)
                 }
-                .padding(.bottom)
+                .disabled(!isValid)
+                .opacity(isValid ? 1 : 0.5)
+                .padding([.top, .bottom], 30)
+                
+                Spacer()
             }
             .padding()
             .background(.white)
             .cornerRadius(10, antialiased: true)
-            .offset(y: isEditing ? -320 : 0)
         }
         .edgesIgnoringSafeArea(.bottom)
     }
@@ -102,5 +100,5 @@ struct TaskCreationView: View {
 }
 
 #Preview {
-    TaskCreationView(isShow: .constant(true), name: "", priority: .normal)
+    TaskCreationView(isShow: .constant(true))
 }
