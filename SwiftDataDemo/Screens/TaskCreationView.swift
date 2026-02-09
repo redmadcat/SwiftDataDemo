@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct TaskCreationView: View {
+    /*
+     * - Настроив контейнер модели в SwiftDataDemoApp (.modelContainer(for: TaskItem.self)),
+     *   мы готовы использовать контекст модели для извлечения и сохранения данных.
+     */
     @Environment(\.modelContext) private var modelContext
     
     @Binding var isShow: Bool
@@ -93,6 +97,9 @@ struct TaskCreationView: View {
         .edgesIgnoringSafeArea(.bottom)
     }
     
+    /*
+     * - Чтобы добавить новый элемент, достаточно вызвать метод insert модели контекста и передать ей элемент в качестве параметра.
+     */
     private func addTask(name: String, priority: TaskPriority, isComplete: Bool = false) {
         let task = TaskItem(name: name, priority: priority, isComplete: isComplete)
         modelContext.insert(task)

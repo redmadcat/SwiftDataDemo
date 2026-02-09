@@ -9,8 +9,19 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    /*
+     * - Настроив контейнер модели в SwiftDataDemoApp (.modelContainer(for: TaskItem.self)),
+     *   мы готовы использовать контекст модели для извлечения и сохранения данных.
+     */
     @Environment(\.modelContext) private var modelContext
     @State private var newTaskIsShow = false
+        
+    /*
+     * - @Query автоматически извлекает необходимые данные для нас, для простого извлечения данных,
+     *   достаточно определения - (@Query var taskItems: [TaskItem])
+     *   В приведенном ниже примере мы указываем, что нам необходимо извлекать экземпляры TaskItem,
+     *   так же дополнительно указываем опцию сортировки элементов согласно приоритету.
+     */
     @Query(sort: \TaskItem.priorityValue, order: .reverse) private var taskItems: [TaskItem]
         
     var body: some View {
@@ -49,6 +60,11 @@ struct ContentView: View {
         }
     }
     
+    /*
+     * - Для демонстрации функции удаления, используем набор индексов, в котором хранятся индексы элементов, подлежащие удалению.
+     *   Чтобы удалить элемент из постоянного хранилища, достаточно вызвать функцию удаления (delete)
+     *   в контексте модели и передать элемент который необходимо удалить в качестве параметра.
+     */
     private func deleteTask(indexSet: IndexSet) {
         for index in indexSet {
             let itemToDelete = taskItems[index]
